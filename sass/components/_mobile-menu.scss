@@ -1,0 +1,236 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+
+  background-color: var(--white-text-color);
+
+  transform: translateX(-100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 60px;
+    border: 1px solid #ececec;
+  }
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-header {
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.menu__logo {
+  @extend %link;
+
+  margin: 0;
+  padding: 16px 0px 4px 15px;
+}
+
+.menu__logo--color {
+  color: var(--second-text-color);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+  border: none;
+  background-color: var(--white-text-color);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-toggle__icon {
+  width: 24px;
+  height: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .menu-toggle:hover &,
+  .menu-toggle:focus & {
+    fill: var(--akcent-text-color);
+  }
+}
+
+.menu-nav {
+  margin-bottom: 302px;
+  padding-right: 83px;
+  padding-left: 40px;
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 32vh;
+  }
+}
+
+.menu-nav__list {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-nav__item {
+  margin-left: 0;
+  margin-right: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.menu-nav__link {
+  @extend %link;
+  position: relative;
+
+  @include font(500, 40px, 47px, 0.02em);
+  color: var(--second-text-color);
+}
+
+.menu-nav__link--active {
+  color: var(--akcent-text-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--akcent-text-color);
+    border-radius: 2px;
+  }
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+  padding-left: 40px;
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 45px;
+  }
+}
+
+.menu-contacts__list {
+  @extend %list;
+}
+
+.menu-contacts__tel {
+  margin-bottom: 32px;
+  color: var(--akcent-text-color);
+
+  @media screen and (max-width: 479px) {
+    @include font(500, 26px, 32px, 0.02em);
+  }
+
+  @media screen and (min-width: 480px) {
+    @include font(500, 34px, 40px, 0.02em);
+  }
+}
+
+.menu-contacts__mail {
+  @include font(500, 24px, 28px, 0.02em);
+  color: var(--first-text-color);
+}
+
+.menu-contacts__link {
+  @extend %link;
+}
+
+.menu-socials {
+  @media screen and (max-width: 480px) {
+    padding: 0px 40px 48px 40px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 0px 83px 48px 40px;
+  }
+}
+
+.menu-socials__list {
+  @extend %list;
+  display: flex;
+
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+  }
+}
+
+.menu-socials__item {
+  position: relative;
+
+  @include font(500, 18px, 22px, 0.02em);
+  color: var(--akcent-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .menu-socials__item:not(:last-child) {
+    margin-right: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      top: 50%;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .menu-socials__item:nth-child(2n + 1) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      top: 50%;
+      left: 31vw;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.menu-socials__list--margin {
+  @media screen and (max-width: 479px) {
+    margin: -15px;
+
+    // margin-right: calc(-1 * var(--card-set-gap));
+    // margin-bottom: calc(-1 * var(--card-set-gap-bottom));
+  }
+}
+
+.menu-socials__item--margin {
+  @media screen and (max-width: 479px) {
+    margin: 15px;
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    // margin-right: var(--card-set-gap);
+    // margin-bottom: var(--card-set-gap-bottom);
+  }
+}
+
+.menu-socials__link {
+  @extend %link;
+}

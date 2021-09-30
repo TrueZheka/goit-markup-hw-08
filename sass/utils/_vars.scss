@@ -8,11 +8,13 @@
   --hero-footer-bg-color: #2f303a;
   --first-icon-color: #afb1b8;
 
-  --address-text-color: rgba(255, 255, 255, 0, 6);
-  --section-padding: 94px;
+  --margin: 30px;
+  --desktop-section-padding: 94px;
   --card-set-gap: 30px;
+  --card-set-gap-bottom: 15px;
 }
+
 // Набор шрифтов
 
-$primeryFont: 'Roboto', sans-serif;
-$secondaryColor: 'Raleway', sans-serif;
+$primeryFont: "Roboto", sans-serif;
+$secondaryFont: "Raleway", sans-serif;

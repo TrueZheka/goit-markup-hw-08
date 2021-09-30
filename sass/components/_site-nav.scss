@@ -1,6 +1,10 @@
 .site-nav__list {
   @extend %list;
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -20,11 +24,11 @@
 
   @include font(500, 14px, 16px, 0.02em);
 
-  color: var(--second-text-color);
+  color: var(--secondary-text-color);
 
   &:hover,
   &:focus {
-    color: var(--akcent-text-color);
+    color: var(--accent-link-color);
   }
 }
 
@@ -32,7 +36,7 @@
   color: var(--akcent-text-color);
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1px;
     left: 0;

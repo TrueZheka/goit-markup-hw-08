@@ -1,11 +1,12 @@
 .socials-list {
   @extend %list;
-  display: flex;
+  @include centeredFlex();
 }
 
 .socials__item {
   width: 44px;
   height: 44px;
+  margin: 0;
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -23,7 +24,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--akcent-text-color);
+    background-color: var(--accent-link-color);
   }
 }
 
