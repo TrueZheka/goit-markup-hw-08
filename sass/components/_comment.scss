@@ -1,5 +1,9 @@
 .comment {
   margin-bottom: 20px;
+
+  @media screen and (max-width: 467px) {
+    margin-bottom: 15px;
+  }
 }
 
 .comment__text {
@@ -25,8 +29,13 @@
     color: rgba(117, 117, 117, 0.5);
   }
 
-  &:focus-within,
-  &:hover {
+  &:focus-within {
     border-color: var(--akcent-text-color);
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .comment__text {
+    height: 85px;
   }
 }

@@ -260,6 +260,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: auto;
   padding: 40px;
   background-color: var(--white-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -268,11 +269,17 @@ img {
 
 @media screen and (max-width: 479px) {
   .modal {
-    max-width: 320px;
+    width: 320px;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 767px) {
   .modal {
     width: 450px;
   }
@@ -292,6 +299,15 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--second-text-color);
+}
+
+@media screen and (max-width: 467px) {
+  .form__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.57143;
+    letter-spacing: 0.03em;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -354,6 +370,12 @@ img {
   border-color: var(--akcent-text-color);
 }
 
+@media screen and (max-width: 467px) {
+  .form__input {
+    height: 30px;
+  }
+}
+
 .form__icon {
   position: absolute;
   top: 50%;
@@ -404,6 +426,12 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 467px) {
+  .comment {
+    margin-bottom: 15px;
+  }
+}
+
 .comment__text {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
@@ -429,8 +457,14 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment__text:focus-within, .comment__text:hover {
+.comment__text:focus-within {
   border-color: var(--akcent-text-color);
+}
+
+@media screen and (max-width: 467px) {
+  .comment__text {
+    height: 85px;
+  }
 }
 
 .checkbox {
@@ -438,6 +472,12 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 479px) {
+  .checkbox {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -644,6 +684,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-header {
+    display: flex;
   }
 }
 
