@@ -1,56 +1,86 @@
 .team--bg {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--white-text-color);
 }
 
 .team__title {
-  margin-bottom: 50px;
-
-  @include font(700, 36px, 42px);
   text-align: center;
   color: var(--second-text-color);
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: var(--margin);
+    @include font(700, 28px, 33px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include font(700, 36px, 42px);
+  }
 }
 
 .team__list {
   @extend %list;
-  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__item {
+  background-color: var(--white-text-color);
+
   border-bottom: 1px solid transparent;
   border-radius: 0px 0px 4px 4px;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  background-color: var(--white-text-color);
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: var(--margin);
+    }
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - var(--margin));
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: var(--margin);
+    }
   }
 }
 
 .team-member__image {
-  margin-bottom: 30px;
+  margin-bottom: var(--margin);
 }
 
 .team-member__content {
-  text-align: center;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+    padding-bottom: 30px;
+  }
 }
 
 .team-member__title {
   margin-bottom: 10px;
 
   @include font(500, 16px, 19px);
-
+  text-align: center;
   color: var(--second-text-color);
 }
 
 .team-member__text {
   margin-bottom: 16px;
 
+  text-align: center;
   @include font(400, 16px, 19px);
 }
 

@@ -1088,43 +1088,86 @@ img {
 }
 
 .team--bg {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--white-text-color);
 }
 
 .team__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16667;
-  letter-spacing: 0.03em;
   text-align: center;
   color: var(--second-text-color);
 }
 
-.team__list {
-  display: flex;
+@media screen and (max-width: 1199px) {
+  .team__title {
+    margin-bottom: var(--margin);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17857;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16667;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__list {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__item {
+  background-color: var(--white-text-color);
   border-bottom: 1px solid transparent;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: var(--white-text-color);
 }
 
-.team__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: var(--margin);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__item {
+    flex-basis: calc(100% / 2 - var(--margin));
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item:not(:last-child) {
+    margin-right: var(--margin);
+  }
 }
 
 .team-member__image {
-  margin-bottom: 30px;
+  margin-bottom: var(--margin);
 }
 
 .team-member__content {
-  text-align: center;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-member__content {
+    max-width: 270px;
+    padding-bottom: 30px;
+  }
 }
 
 .team-member__title {
@@ -1133,11 +1176,13 @@ img {
   font-size: 16px;
   line-height: 1.1875;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--second-text-color);
 }
 
 .team-member__text {
   margin-bottom: 16px;
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.1875;
