@@ -11,7 +11,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/header-mob-min.jpg);
+    url(../images/header/header-mob-min.jpg);
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -23,7 +23,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/header-mob@2x-min.jpg");
+      url("../images/header/header-mob@2x-min.jpg");
   }
 }
 
@@ -33,7 +33,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/header-tab-min.jpg);
+      url(../images/header/header-tab-min.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -45,7 +45,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("../images/header-tab@2x-min.jpg");
+        url("../images/header/header-tab@2x-min.jpg");
     }
   }
 }
@@ -56,7 +56,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/header-desk-min.jpg);
+      url(../images/header/header-desk-min.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -68,7 +68,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("../images/header-desk@2x-min.jpg");
+        url("../images/header/header-desk@2x-min.jpg");
     }
   }
 }

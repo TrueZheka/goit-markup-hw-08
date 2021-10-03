@@ -24,11 +24,11 @@
 
   @include font(500, 14px, 16px, 0.02em);
 
-  color: var(--secondary-text-color);
+  color: var(--second-text-color);
 
   &:hover,
   &:focus {
-    color: var(--accent-link-color);
+    color: var(--akcent-text-color);
   }
 }
 

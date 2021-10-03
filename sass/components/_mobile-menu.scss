@@ -88,18 +88,6 @@
 
 .menu-nav__link--active {
   color: var(--akcent-text-color);
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-
-    background-color: var(--akcent-text-color);
-    border-radius: 2px;
-  }
 }
 
 .menu-contacts {

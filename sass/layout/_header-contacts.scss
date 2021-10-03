@@ -41,7 +41,7 @@
   @extend %link;
   @include centeredFlex();
 
-  color: var(--first-icon-color);
+  color: var(--first-text-color);
 
   &:hover,
   &:focus {
